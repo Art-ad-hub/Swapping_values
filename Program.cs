@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,17 +11,13 @@ namespace Swapping_values
     {
         static void Main(string[] args)
         {
-            string name = "Петров";
+            string firstname = "Петров";
             string lastName = "Денис";
+            string intervalValue = firstname;
+            firstname = lastName;
+            lastName = intervalValue;
 
-            Console.WriteLine($"Ваше имя {name}, а ваша фамилия {lastName}.");
-            Console.WriteLine("О нет, похоже что ваши данные перепутанны, давайте исправим?");
-            Console.Write("Введите  ваше имя: ");
-            name = Console.ReadLine();
-            Console.Write("Введите  вашу фамилию: ");
-            lastName = Console.ReadLine();
-            Console.WriteLine("Теперь должно быть правильно!");
-            Console.WriteLine($"Ваше имя {name}, а фамилия {lastName}.");
+            Console.WriteLine($"Ваше имя {firstname}, а ваша фамилия {lastName}.");
             Console.ReadKey();
         }
     }
